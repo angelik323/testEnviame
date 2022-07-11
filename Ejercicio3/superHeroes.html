@@ -64,9 +64,7 @@
                         <div class="col" key={heroe.id}>
                             <div class="card cardHeros">
                                 <div class="card-body">
-                                    
-                                    <img src="{`${{heroe.thumbnail.path}.${heroe.thumbnail.extension}`}" alt="heroe de MARVEL" class="card-img-top">
-                                    <p>{{heroe.id}}</p>
+                                    <img class="imgHeroe" v-bind:src="heroe.thumbnail.path +'.' +heroe.thumbnail.extension"   alt="heroe de MARVEL"/> 
                                     <h4>{{heroe.name}}</h4>
 
                                     <h5 class="card-title"> Descripción del héroe</h5>
