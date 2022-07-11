@@ -1,0 +1,50 @@
+Se debe generar un script que con estas entradas genere el siguiente resultado:
+
+Los servicios para cada localidad con mayor limite:
+
+   let result = {
+        BUIN: {
+            limit: 2,
+            over: {
+                carrier: "CHP",
+                service: "nextday",
+            },
+            under: {
+                carrier: "CHP",
+                service: "nextday",
+            }
+        },
+        LAJA: {
+            limit: 5,
+            over: {
+                carrier: "CCH",
+                service: "express",
+            },
+            under: {
+                 carrier: "CCH",
+                service: "express",
+            }
+        },
+        LEBU: {
+            limit: 6,
+            over: {
+                carrier: "CCH",
+                service: "priority",
+            },
+            under: {
+                 carrier: "CCH",
+                service: "priority",
+            }
+        },
+        LOTA: {
+            limit: 4,
+            over: {
+                carrier: "CHP",
+                service: "sameday",
+            },
+            under: {
+                carrier: "CHP",
+                service: "sameday",
+            }
+        }
+   } 

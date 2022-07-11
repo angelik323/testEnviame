@@ -1,0 +1,28 @@
+const values =  {
+        1: {
+            carrier: "CCH",
+            service: "DEX",
+        },
+        2: {
+            carrier: "CCH",
+            service: "express",
+        },
+        3: {
+            carrier: "CCH",
+            service: "priority",
+        },
+        15: {
+            carrier: "CHP",
+            service: "nextday",
+        },
+        16: {
+            carrier: "CHP",
+            service: "sameday",
+        },
+        17: {
+            carrier: "CHP",
+            service: "express",
+        }
+   };
+
+export {values};
