@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
                 heroes: [],
                 url: '',
                 size: 'standard_large.jpg',
-                img: 'http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg',
+                filtro: '',
             }
         },
         created() {
@@ -14,7 +14,6 @@ window.addEventListener('load', () => {
         },
         methods: {
             listHeroes: async function(){
-                const img = 'http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg';
                 const res = await fetch('https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=117d27d57efac682c626ef9bf2bb98dc&hash=b3f42ecebad378b2e1fa5d85d2fe166d&limit=100');
                 const data = await res.json();
                 this.heroes = data.data.results;
@@ -31,8 +30,18 @@ window.addEventListener('load', () => {
             },
             updateLocalStorage: function() {
                 //localStorage.setItem('vue3.heroes'. JSON.stringify(this.heroes)); 
+            },
+            buscar(event) {
+                alert("hola mundote");
+            },
+            
+        },
+        watch: {
+            filtro: function (value) {
+                console.log(value);
             }
-        }
+        },
+
     })
     app.mount('#app');
 })

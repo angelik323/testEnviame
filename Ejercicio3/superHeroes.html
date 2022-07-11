@@ -39,8 +39,14 @@
                 </ul>
 
                 <form class="d-flex buscar">
-                    <input class="form-control me-sm-2" type="text" placeholder="Buscar súper héroe">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Búscar</button>
+                    <input 
+                        v-model="filtro"
+                        @input="buscar" 
+                        class="form-control me-sm-2" 
+                        type="text" 
+                        placeholder="Buscar súper héroe"
+                    >
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Búscar</button> 
                 </form>
 
             </div>
@@ -55,16 +61,21 @@
     </div>
 
     <section id="app" class="cardMarvel">
-        <div class="card text-white bg-gray mb-3" style="max-width: 90rem;">
+        <div class="card text-white bg-gray mb-3" style="max-width: 105rem;">
             <div class="card-header">Lista de súper héroes de MARVEL</div>
             <div class="card-body">
                 
                 <div class="row row-cols-1 row-cols-md-3 g-4">
+
                     <div v-for="(heroe, index) in heroes">
                         <div class="col" key={heroe.id}>
                             <div class="card cardHeros">
-                                <div class="card-body">
-                                    <img class="imgHeroe" v-bind:src="heroe.thumbnail.path +'.' +heroe.thumbnail.extension"   alt="heroe de MARVEL"/> 
+                                <div class="card-body card-body2">
+                                    <img 
+                                    class="imgHeroe" 
+                                    v-bind:src="heroe.thumbnail.path +'.' +heroe.thumbnail.extension"   
+                                    alt="heroe de MARVEL"
+                                    /> 
                                     <h4>{{heroe.name}}</h4>
 
                                     <h5 class="card-title"> Descripción del héroe</h5>
@@ -74,7 +85,7 @@
                                     <p>{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}</p>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <small class="text-muted">Created at 11 Julio del año 2022 to amll</small>
                                 </div>
                             </div>
                         </div>
