@@ -1,6 +1,7 @@
 body {
     background-image: url(https://img.freepik.com/vector-gratis/fondo-estilo-comic-plano_23-2148794906.jpg?w=1060&t=st=1657536542~exp=1657537142~hmac=4671dbe51b67d232f5fbe5f8c8d71c64a0d2b238b8ad822d48ad735a38104a37);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -10,12 +11,14 @@ body {
 }
 
 .cardMarvel {
-    /*display: flex;*/
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin-left: 13%;
-    margin-right: 13%;
+    /*margin-right: 13%;*/
     height: 100vh;
     
+}
+
+.cardHeros {
+    width: 18rem;
 }
