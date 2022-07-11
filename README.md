@@ -17,4 +17,4 @@
 
 ##Visual del Ejercicio3:
 
-![Consumo de MARVEL API](https://www.cvamll.me/assets/img/gallery/visualEjercicio3.png)
+![visualEjercicio3 -> consumo de MARVEL API](https://user-images.githubusercontent.com/21269129/178350959-59f140a5-82f9-40e4-8f43-7f226bb55239.png)
