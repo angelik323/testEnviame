@@ -108,7 +108,7 @@ const seleccionarMayor = (data) => {
         }
     }
 
-    return {
+    return JSON.stringify({
            'limit': limit, 
            'over': {
                 'carrier': values[over].carrier,
@@ -118,24 +118,17 @@ const seleccionarMayor = (data) => {
                 'carrier': values[under].carrier,
                 'service': values[under].service,
                 },
-        }; 
+        }); 
 }
 
     
 myJson = {};
-
+let str = '';
 for(elemento in json.data) {
    const indice = JSON.stringify(elemento);
    const e = seleccionarMayor(json.data[elemento]);
-   
-
-   // console.log(r);
-   
-   var key = indice;
-    var obj = {};
-    obj[key] = e;
-      
-    console.log( obj);
-    //myJson[elemento] = seleccionarMayor( json.data[elemento]);
+   str += `${indice}:${e},`;
 }
-
+str = '{' + str + '}';
+console.log(str);
+console.log(JSON.parse(str));
