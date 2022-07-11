@@ -14,3 +14,7 @@
  - Javascript
  - HTML5
  - CSS3
+
+##Visual del Ejercicio3:
+
+![Consumo de MARVEL API](https://www.cvamll.me/assets/img/gallery/visualEjercicio3.png)
