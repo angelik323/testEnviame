@@ -58,55 +58,30 @@
         <div class="card text-white bg-gray mb-3" style="max-width: 90rem;">
             <div class="card-header">Lista de súper héroes de MARVEL</div>
             <div class="card-body">
-                <h4 class="card-title"></h4>
-
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col"></div>
-                    <div class="card cardHeros">
-                        <img src="" alt="heroe de MARVEL" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
                 
-                <div class="card-deck">
-                    <div class="card">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div v-for="(heroe, index) in heroes">
+                        <div class="col" key={heroe.id}>
+                            <div class="card cardHeros">
+                                <div class="card-body">
+                                    
+                                    <img src="{`${{heroe.thumbnail.path}.${heroe.thumbnail.extension}`}" alt="heroe de MARVEL" class="card-img-top">
+                                    <p>{{heroe.id}}</p>
+                                    <h4>{{heroe.name}}</h4>
+
+                                    <h5 class="card-title"> Descripción del héroe</h5>
+                                    <p>{{heroe.description}}</p>
+                                    <h6> Modificado: </h6>
+                                    <p>{{heroe.modified}}</p>
+                                    <p>{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                    </div>
-                  </div>
-            
+                </div>            
             </div>
         </div>
     </section>
